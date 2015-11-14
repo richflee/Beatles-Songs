@@ -12,6 +12,12 @@
 		9B8F8B581BE20FE600E0716A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F8B561BE20FE600E0716A /* Main.storyboard */; };
 		9B8F8B5A1BE20FE600E0716A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F8B591BE20FE600E0716A /* Assets.xcassets */; };
 		9B8F8B5D1BE20FE600E0716A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F8B5B1BE20FE600E0716A /* LaunchScreen.storyboard */; };
+		9B8F8B651BE2140200E0716A /* FavouriteSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F8B641BE2140200E0716A /* FavouriteSongsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9B8F8B681BE2146C00E0716A /* FavouriteSongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F8B671BE2146C00E0716A /* FavouriteSongsViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		9BA595171BE816DA000C0BBC /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA595161BE816DA000C0BBC /* SongViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9BA595191BE816FE000C0BBC /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA595181BE816FE000C0BBC /* SongViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		9BB9057B1BE4C67D00104D0D /* SongTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BB9057A1BE4C67D00104D0D /* SongTableCell.xib */; settings = {ASSET_TAGS = (); }; };
+		9BB9057E1BE4C71100104D0D /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB9057D1BE4C71100104D0D /* SongTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		9B8F8B591BE20FE600E0716A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B8F8B5C1BE20FE600E0716A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B8F8B5E1BE20FE600E0716A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B8F8B641BE2140200E0716A /* FavouriteSongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouriteSongsViewController.swift; path = "View Controllers/FavouriteSongsViewController.swift"; sourceTree = "<group>"; };
+		9B8F8B671BE2146C00E0716A /* FavouriteSongsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FavouriteSongsViewController.xib; path = Xibs/FavouriteSongsViewController.xib; sourceTree = "<group>"; };
+		9BA595161BE816DA000C0BBC /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongViewController.swift; path = "View Controllers/SongViewController.swift"; sourceTree = "<group>"; };
+		9BA595181BE816FE000C0BBC /* SongViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SongViewController.xib; path = Xibs/SongViewController.xib; sourceTree = "<group>"; };
+		9BB9057A1BE4C67D00104D0D /* SongTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SongTableCell.xib; path = Xibs/SongTableCell.xib; sourceTree = "<group>"; };
+		9BB9057D1BE4C71100104D0D /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongTableViewCell.swift; path = "TableView Cell/SongTableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,9 @@
 		9B8F8B511BE20FE600E0716A /* BeatlesSongs */ = {
 			isa = PBXGroup;
 			children = (
+				9BB9057F1BE4C71700104D0D /* TableView Cells */,
+				9BB9057C1BE4C68200104D0D /* Xibs */,
+				9B8F8B661BE2140600E0716A /* View Controllers */,
 				9B8F8B521BE20FE600E0716A /* AppDelegate.swift */,
 				9B8F8B541BE20FE600E0716A /* ViewController.swift */,
 				9B8F8B561BE20FE600E0716A /* Main.storyboard */,
@@ -62,6 +77,33 @@
 				9B8F8B5E1BE20FE600E0716A /* Info.plist */,
 			);
 			path = BeatlesSongs;
+			sourceTree = "<group>";
+		};
+		9B8F8B661BE2140600E0716A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B8F8B641BE2140200E0716A /* FavouriteSongsViewController.swift */,
+				9BA595161BE816DA000C0BBC /* SongViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9BB9057C1BE4C68200104D0D /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				9B8F8B671BE2146C00E0716A /* FavouriteSongsViewController.xib */,
+				9BB9057A1BE4C67D00104D0D /* SongTableCell.xib */,
+				9BA595181BE816FE000C0BBC /* SongViewController.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		9BB9057F1BE4C71700104D0D /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9BB9057D1BE4C71100104D0D /* SongTableViewCell.swift */,
+			);
+			name = "TableView Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +165,10 @@
 			files = (
 				9B8F8B5D1BE20FE600E0716A /* LaunchScreen.storyboard in Resources */,
 				9B8F8B5A1BE20FE600E0716A /* Assets.xcassets in Resources */,
+				9B8F8B681BE2146C00E0716A /* FavouriteSongsViewController.xib in Resources */,
+				9BA595191BE816FE000C0BBC /* SongViewController.xib in Resources */,
 				9B8F8B581BE20FE600E0716A /* Main.storyboard in Resources */,
+				9BB9057B1BE4C67D00104D0D /* SongTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB9057E1BE4C71100104D0D /* SongTableViewCell.swift in Sources */,
+				9B8F8B651BE2140200E0716A /* FavouriteSongsViewController.swift in Sources */,
+				9BA595171BE816DA000C0BBC /* SongViewController.swift in Sources */,
 				9B8F8B551BE20FE600E0716A /* ViewController.swift in Sources */,
 				9B8F8B531BE20FE600E0716A /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +331,7 @@
 				9B8F8B631BE20FE600E0716A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

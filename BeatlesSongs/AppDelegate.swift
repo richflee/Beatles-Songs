@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let bounds:CGRect = UIScreen.mainScreen().bounds
+        window = UIWindow(frame: bounds)
+        
+        
+        let favSongsController = FavouriteSongsViewController(nibName:"FavouriteSongsViewController", bundle:NSBundle.mainBundle())
+        let navController: UINavigationController = UINavigationController(rootViewController: favSongsController)
+        
+        
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

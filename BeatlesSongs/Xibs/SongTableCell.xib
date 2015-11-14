@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Vd2-Xk-6z2" customClass="SongTableViewCell" customModule="BeatlesSongs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vd2-Xk-6z2" id="zBD-jL-dtO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snv-9y-YbK" userLabel="songLabel">
+                        <rect key="frame" x="18" y="11" width="260" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Snv-9y-YbK" firstAttribute="top" secondItem="zBD-jL-dtO" secondAttribute="top" constant="11" id="7OE-pS-n0n"/>
+                    <constraint firstItem="Snv-9y-YbK" firstAttribute="leading" secondItem="zBD-jL-dtO" secondAttribute="leading" constant="18" id="Vi8-HZ-AFX"/>
+                    <constraint firstAttribute="bottom" secondItem="Snv-9y-YbK" secondAttribute="bottom" constant="12.5" id="nPP-Lb-upd"/>
+                    <constraint firstAttribute="trailing" secondItem="Snv-9y-YbK" secondAttribute="trailing" constant="42" id="xBp-xF-wWn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="songLabel" destination="Snv-9y-YbK" id="coG-YY-Fwa"/>
+            </connections>
+            <point key="canvasLocation" x="460" y="130"/>
+        </tableViewCell>
+    </objects>
+</document>
