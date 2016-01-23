@@ -9,6 +9,8 @@
 import UIKit
 
 class FavouriteSongsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    typealias beatlesSong = (title:String, viewed:Int)
 
     @IBOutlet var tableView: UITableView! {
     
@@ -19,23 +21,19 @@ class FavouriteSongsViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    var songs:[String] = []
+    var songs:[beatlesSong] = []
     let songsReuseIdentifier = "songsCellReuseIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        songs.append("Yesterday")
-        songs.append("Yellow Submarine")
-        songs.append("Help!")
-        songs.append("Nowhere man")
-        songs.append("Glass onion")
-        songs.append("Julia")
-        songs.append("Ticket to Ride")
-        songs.append("Here comes the sun")
-        songs.append("Come together")
-        songs.append("A day in the life")
-        songs.append("Michelle")
+        
+        let songTitles = [ "Yesterday", "Yellow Submarine", "Help!", "Nowhere man", "Glass onion", "Julia", "Ticket to Ride", "Here comes the sun", "Come together", "A day in the life", "Michelle" ]
+        
+        songTitles.forEach { (songTitle) -> () in
+            
+            let song = ( songTitle, Int(arc4random_uniform(2)) )
+            songs.append(song)
+        }
         
         
         let nib:UINib = UINib(nibName: "SongTableCell", bundle: NSBundle.mainBundle())
@@ -53,6 +51,8 @@ class FavouriteSongsViewController: UIViewController, UITableViewDelegate, UITab
         super.viewDidAppear(animated)
         
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            
+            
             tableView.deselectRowAtIndexPath(selectedIndexPath, animated:true)
         }
     }
@@ -70,12 +70,8 @@ class FavouriteSongsViewController: UIViewController, UITableViewDelegate, UITab
         
         let cell:SongTableViewCell = tableView.dequeueReusableCellWithIdentifier(songsReuseIdentifier, forIndexPath: indexPath) as! SongTableViewCell
         
-        let rand:Int  = Int(arc4random_uniform(2))
-        print(rand)
-        
-        cell.songLabel.text = songs[indexPath.row]
-        
-        cell.markAsRead(Bool(rand))
+        cell.songLabel.text = songs[indexPath.row].title
+        cell.markAsRead(Bool(songs[indexPath.row].viewed))
         
         return cell
     }
@@ -87,11 +83,16 @@ class FavouriteSongsViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
-        let songTitle = songs[indexPath.row]
+        var song = songs[indexPath.row]
         
         let songViewController = SongViewController(nibName:"SongViewController", bundle:nil)
-        songViewController.songTitle = songTitle
+        songViewController.songTitle = song.title
+        song.viewed = 1
+        
+        songs[indexPath.row] = song
+        
+        let cell:SongTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as! SongTableViewCell
+        cell.markAsRead(Bool(song.viewed))
         
         navigationController?.pushViewController(songViewController, animated: true)
     }
